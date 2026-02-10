@@ -10,7 +10,7 @@ export const translations = {
         "hero.title1": "FlowFi is Capital,",
         "hero.title2": "Governed.",
         "hero.btn.treasury": "Establish Treasury",
-        "hero.btn.litepaper": "Read Litepaper",
+        "hero.btn.litepaper": "Read Whitepaper",
         "hero.btn.gov": "View Governance",
 
         "side.protocol": "Protocol",
@@ -51,7 +51,7 @@ export const translations = {
         "road.title1": "Long-term",
         "road.title2": "Infrastructure.",
         "road.desc": "FlowFi's roadmap is not about trends. It is about the systemic transition of capital to the ENI Mainnet.",
-        "road.read": "Read Litepaper",
+        "road.read": "Read Whitepaper",
 
         "road.p1.sub": "Phase 01: System Launch",
         "road.p1.title": "Genesis Governance",

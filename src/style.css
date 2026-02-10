@@ -13,7 +13,7 @@
 
 body {
   font-family: 'IBM Plex Sans', sans-serif;
-  background-color: var(--bg-primary);
+  background-color: transparent;
   color: var(--neutral-dark);
   margin: 0;
   overflow-x: hidden;
@@ -128,6 +128,36 @@ body {
     opacity: 1;
     transform: scale(1.1);
   }
+}
+
+@keyframes floatSubtle {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-float-subtle {
+  animation: floatSubtle 5s ease-in-out infinite;
 }
 
 .animate-float {
@@ -340,109 +370,110 @@ nav {
   top: 0;
   bottom: 0;
   width: 1px;
+}
 
-  /* -------------------------------
+/* -------------------------------
    Taiko-style Architecture Section
 ------------------------------- */
-  .section-fullscreen {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+.section-fullscreen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+
+
+
+@keyframes rotate3dFlat {
+  0% {
+    transform: perspective(1000px) rotateX(10deg) rotateY(0deg);
   }
 
-
-
-
-  @keyframes rotate3dFlat {
-    0% {
-      transform: perspective(1000px) rotateX(10deg) rotateY(0deg);
-    }
-
-    25% {
-      transform: perspective(1000px) rotateX(0deg) rotateY(10deg);
-    }
-
-    50% {
-      transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);
-    }
-
-    75% {
-      transform: perspective(1000px) rotateX(0deg) rotateY(-10deg);
-    }
-
-    100% {
-      transform: perspective(1000px) rotateX(10deg) rotateY(0deg);
-    }
+  25% {
+    transform: perspective(1000px) rotateX(0deg) rotateY(10deg);
   }
 
-  .animate-rotate-flat {
-    animation: rotate3dFlat 6s infinite linear;
-    /* Circular Tilt Motion */
-    transform-style: preserve-3d;
+  50% {
+    transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);
   }
 
-  /* Architecture Connector Lines */
-  .arch-line-left {
-    position: absolute;
-    top: 50%;
-    right: 55%;
-    width: 35vw;
-    height: 1px;
-    background: linear-gradient(to right, transparent, var(--ff-purple));
-    z-index: 0;
-    opacity: 0.6;
+  75% {
+    transform: perspective(1000px) rotateX(0deg) rotateY(-10deg);
   }
 
-  .arch-line-right {
-    position: absolute;
-    top: 50%;
-    left: 55%;
-    width: 35vw;
-    height: 1px;
-    background: linear-gradient(to left, transparent, var(--gold-accent));
-    z-index: 0;
-    opacity: 0.6;
-  }
-
-  .arch-dot {
-    width: 8px;
-    height: 8px;
-    background: white;
-    border: 2px solid var(--ff-purple);
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    box-shadow: 0 0 10px var(--ff-purple);
-  }
-
-  .arch-label {
-    position: absolute;
-    top: -25px;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
-
-  /* Retro Grid Animation */
-  @keyframes grid {
-    0% {
-      transform: translateY(0);
-    }
-
-    100% {
-      transform: translateY(60px);
-    }
-  }
-
-  .animate-grid {
-    animation: grid 3s linear infinite;
+  100% {
+    transform: perspective(1000px) rotateX(10deg) rotateY(0deg);
   }
 }
+
+.animate-rotate-flat {
+  animation: rotate3dFlat 6s infinite linear;
+  /* Circular Tilt Motion */
+  transform-style: preserve-3d;
+}
+
+/* Architecture Connector Lines */
+.arch-line-left {
+  position: absolute;
+  top: 50%;
+  right: 55%;
+  width: 35vw;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--ff-purple));
+  z-index: 0;
+  opacity: 0.6;
+}
+
+.arch-line-right {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  width: 35vw;
+  height: 1px;
+  background: linear-gradient(to left, transparent, var(--gold-accent));
+  z-index: 0;
+  opacity: 0.6;
+}
+
+.arch-dot {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border: 2px solid var(--ff-purple);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 10px var(--ff-purple);
+}
+
+.arch-label {
+  position: absolute;
+  top: -25px;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Retro Grid Animation */
+@keyframes grid {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(60px);
+  }
+}
+
+.animate-grid {
+  animation: grid 3s linear infinite;
+}
+
 
 /* Side Navigation (Vertical Left - Dots Only) */
 .side-nav {
