@@ -1,0 +1,232 @@
+FLOWFI_BRAND_GUIDELINES_V1
+==========================
+
+[BRAND_POSITIONING]
+FlowFi is decentralized infrastructure for governing, deploying, and compounding capital on-chain.
+Brand personality: calm, intelligent, structured, transparent, long-term.
+No hype, no speculation language, no playful or meme-driven visuals.
+
+--------------------------------------------------
+
+[DESIGN_DIRECTION]
+UI Theme: Light
+Visual Style: Flat Isometric System Design
+Aesthetic Keywords:
+- Infrastructure
+- Governance
+- Flow
+- Precision
+- Transparency
+- Modularity
+
+Design Principles:
+- Structure over decoration
+- Systems over storytelling
+- Flow over flash
+- Clarity over persuasion
+- Longevity over trends
+
+--------------------------------------------------
+
+[ART_STYLE]
+Primary Style: Flat Isometric Illustration
+Perspective: True isometric (30° / 60°)
+Depth Method:
+- Layer stacking
+- Subtle elevation
+- Grid-based planes
+(No perspective blur, no realistic shadows)
+
+Forms:
+- Platforms
+- Blocks
+- Containers
+- Nodes
+- Channels
+- Charts as system objects
+
+Line Style:
+- Clean vector SVG
+- Consistent stroke width
+- Rounded joins
+- No sketch or hand-drawn effects
+
+Prohibited:
+- Characters or mascots
+- Cartoon metaphors
+- Heavy gradients
+- Photorealistic 3D
+- Neon or glow effects
+
+--------------------------------------------------
+
+[COLOR_SYSTEM]
+(Color values derived from FlowFi logo + isometric illustration)
+
+Base Colors (UI Foundation):
+- Background Primary: #F8F9FB
+- Background Secondary: #F2F3F6
+- Surface / Card: #FFFFFF
+- Grid / Divider: #E6E8EE
+
+Primary Brand Color (FlowFi Purple):
+- Primary Accent: #7B5CFA
+Usage:
+- Active states
+- Flow paths
+- Highlights
+- Key system signals
+Max usage: 5–10% of screen
+
+Secondary Brand Color (Soft Lavender):
+- Secondary Accent: #B9A9FF
+Usage:
+- Secondary flows
+- Hover states
+- Supporting system elements
+
+Neutral Structure Colors:
+- Neutral Dark: #2E2F33
+- Neutral Mid: #6B6F76
+- Neutral Light: #C8CCD4
+
+Functional Highlight (Treasury Gold):
+- Gold Accent: #F2C94C
+Usage:
+- Treasury objects
+- Value storage indicators
+- Important but non-interactive emphasis
+Use sparingly, never for UI buttons
+
+Rules:
+- Color communicates state, not emotion
+- No gradients unless subtle and functional
+- No pure black or pure white
+
+--------------------------------------------------
+
+[TYPOGRAPHY]
+
+Primary Typeface (UI + Body):
+- Inter / Source Sans 3 / IBM Plex Sans
+Traits:
+- High legibility
+- Neutral tone
+- Strong numerals
+- Works well for data-heavy UI
+
+Secondary Typeface (Headings):
+- Same family or system-weight variation
+(No expressive display fonts)
+
+Hierarchy:
+- H1: Large, calm, confident
+- H2/H3: Clear structure
+- Body: Comfortable reading, generous line-height
+- Labels: Small, precise, neutral
+
+Typography Rules:
+- No all-caps headlines
+- No decorative fonts
+- Numbers slightly emphasized in data contexts
+
+--------------------------------------------------
+
+[LAYOUT_SYSTEM]
+
+Grid:
+- Modular grid system
+- 8pt or 12pt spacing scale
+- Strong vertical rhythm
+
+Background Texture:
+- Very subtle grid lines
+- Low opacity
+- Used to suggest structure and depth
+- Never distract from content
+
+Spacing Philosophy:
+- White space = control
+- Dense layouts avoided
+- Breathing room prioritized
+
+--------------------------------------------------
+
+[ICONOGRAPHY]
+
+Style:
+- Outline SVG icons
+- Same stroke weight as isometric assets
+- No filled icons
+- No mixed styles
+
+Icons behave as:
+- Functional indicators
+- Not decorative elements
+
+--------------------------------------------------
+
+[MOTION_AND_ANIMATION]
+
+Motion Philosophy:
+Motion explains system behavior, not emotion.
+
+Animation Style:
+- Linear or ease-in-out
+- Calm, deliberate timing
+- One axis at a time
+
+Allowed Motions:
+- Flow lines moving along paths
+- Nodes activating sequentially
+- Soft fade + position transitions
+
+Prohibited Motions:
+- Bounce
+- Elastic
+- Overshoot
+- Parallax tricks
+- Fast or playful animations
+
+Timing:
+- Short UI transitions: 150–250ms
+- System flows: 600–1200ms
+
+--------------------------------------------------
+
+[WEBSITE_COMPONENT_STYLE]
+
+Buttons:
+- Flat
+- Subtle radius
+- Clear hierarchy
+- Primary uses FlowFi Purple
+- No shadows, no glow
+
+Cards:
+- Flat surfaces
+- Light borders
+- Optional slight elevation via layering only
+
+Charts & Data:
+- Minimal colors
+- Clear axes
+- No decorative noise
+- Data clarity over aesthetics
+
+--------------------------------------------------
+
+[DO_NOTS]
+- No crypto clichés (coins, rockets, flames)
+- No aggressive marketing language
+- No neon palettes
+- No playful illustrations
+- No trend-based UI experiments
+
+--------------------------------------------------
+
+[SUMMARY]
+FlowFi’s brand visual system represents decentralized capital as a structured, transparent, and governed system.
+Every design choice must be justifiable by function, clarity, or system logic.
+
+END_FLOWFI_BRAND_GUIDELINES

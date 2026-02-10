@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlowFi | Sovereign Capital Infrastructure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="blueprint-bg"></div>
+    <div class="grid-markers"></div>
+
+    <!-- Dynamic Scroll Navigation (Top Centered) -->
+    <div class="side-nav">
+        <div class="nav-dot active" data-section="hero"><span class="nav-label"
+                data-i18n="side.protocol">Protocol</span></div>
+        <div class="nav-dot" data-section="infra"><span class="nav-label" data-i18n="side.infra">Infrastructure</span>
+        </div>
+        <div class="nav-dot" data-section="vaults"><span class="nav-label" data-i18n="side.arch">Architecture</span>
+        </div>
+        <div class="nav-dot" data-section="economics"><span class="nav-label" data-i18n="side.econ">Economics</span>
+        </div>
+        <div class="nav-dot" data-section="roadmap"><span class="nav-label" data-i18n="side.roadmap">Roadmap</span>
+        </div>
+    </div>
+
+
+
+    <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 px-8 flex items-center justify-between bg-white/90 backdrop-blur-md border-b border-[#E6E8EE] transition-all duration-300"
+        style="height: 100px;">
+        <div class="flex items-center h-full">
+            <a href="#" class="flex items-center mr-16">
+                <!-- Original Logo for Light Theme -->
+                <img src="/assets/logo.png" alt="FlowFi" class="h-10 w-auto">
+            </a>
+
+            <div class="hidden lg:flex h-full items-center">
+                <!-- Nav Links with dividers -->
+                <div class="flex items-center h-full border-l border-[#E6E8EE]">
+                    <a href="#infra"
+                        class="h-full flex items-center px-8 text-sm font-bold text-[#6B6F76] hover:text-[#7B5CFA] hover:bg-[#F8F9FB] transition-colors uppercase tracking-widest border-r border-[#E6E8EE]"
+                        data-i18n="nav.infra">
+                        Infrastructure
+                    </a>
+                    <a href="#vaults"
+                        class="h-full flex items-center px-8 text-sm font-bold text-[#6B6F76] hover:text-[#7B5CFA] hover:bg-[#F8F9FB] transition-colors uppercase tracking-widest border-r border-[#E6E8EE]"
+                        data-i18n="nav.arch">
+                        Architecture
+                    </a>
+                    <a href="#economics"
+                        class="h-full flex items-center px-8 text-sm font-bold text-[#6B6F76] hover:text-[#7B5CFA] hover:bg-[#F8F9FB] transition-colors uppercase tracking-widest border-r border-[#E6E8EE]"
+                        data-i18n="nav.econ">
+                        Economics
+                    </a>
+                    <a href="#roadmap"
+                        class="h-full flex items-center px-8 text-sm font-bold text-[#6B6F76] hover:text-[#7B5CFA] hover:bg-[#F8F9FB] transition-colors uppercase tracking-widest border-r border-[#E6E8EE]"
+                        data-i18n="nav.roadmap">
+                        Roadmap
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center space-x-8">
+            <!-- Developer / App CTA -->
+            <!-- Language Switcher -->
+            <div class="relative group hidden lg:block z-50">
+                <button class="flex items-center space-x-2 text-[#6B6F76] hover:text-[#7B5CFA] transition-colors py-2">
+                    <span class="text-xs font-bold tracking-widest uppercase" id="lang-switcher-label">EN</span>
+                    <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <!-- Dropdown Menu -->
+                <div class="absolute right-0 top-full w-40 hidden group-hover:block pt-2">
+                    <div
+                        class="bg-white border border-[#E6E8EE] rounded-xl shadow-xl overflow-hidden py-1 cursor-pointer">
+                        <div onclick="window.setLanguage('en')"
+                            class="flex items-center px-6 py-3 text-xs font-bold text-[#6B6F76] hover:text-[#7B5CFA] hover:bg-[#F8F9FB] uppercase tracking-widest transition-colors">
+                            <span>EN</span>
+                        </div>
+                        <div onclick="window.setLanguage('cn')"
+                            class="block px-6 py-3 text-xs font-bold text-[#6B6F76] hover:text-[#7B5CFA] hover:bg-[#F8F9FB] uppercase tracking-widest transition-colors">
+                            CN (简体)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="bg-[#7B5CFA] text-white px-8 py-3 rounded-full text-base font-bold hover:bg-[#B9A9FF] transition-all"
+                data-i18n="nav.launch">
+                Launch App
+            </button>
+        </div>
+    </nav>
+
+    <!-- Section 1: Hero -->
+    <main id="hero"
+        class="pt-[180px] pb-32 flex flex-col items-center text-center max-w-7xl mx-auto px-6 section overflow-hidden">
+
+        <h1
+            class="text-6xl md:text-8xl font-bold text-[#2E2F33] leading-[0.95] mb-12 tracking-tighter max-w-5xl animate-on-scroll">
+            <span data-i18n="hero.title1">FlowFi is Capital,</span> <br />
+            <span class="text-[#7B5CFA]" data-i18n="hero.title2">Governed.</span>
+        </h1>
+
+        <div class="flex flex-wrap justify-center gap-4 mb-24 animate-on-scroll delay-100">
+            <button
+                class="btn-pill btn-primary shadow-lg shadow-purple-200/50 hover:shadow-purple-300/50 transition-all group">
+                <span data-i18n="hero.btn.treasury">Establish Treasury</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    class="group-hover:translate-x-1 transition-transform ml-2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </button>
+            <button
+                class="btn-pill bg-white text-[#2E2F33] border border-[#E6E8EE] hover:border-[#7B5CFA] hover:text-[#7B5CFA] group">
+                <span data-i18n="hero.btn.litepaper">Read Litepaper</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    class="group-hover:translate-x-1 transition-transform ml-2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </button>
+            <button
+                class="btn-pill bg-[#F2C94C] text-[#2E2F33] hover:bg-[#ffe083] border border-transparent shadow-lg shadow-yellow-200/50 group">
+                <span data-i18n="hero.btn.gov">View Governance</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    class="group-hover:translate-x-1 transition-transform ml-2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="relative w-full max-w-2xl py-12 flex justify-center animate-on-scroll delay-200">
+            <div class="hud-container">
+                <!-- HUD Markers -->
+                <div class="hud-corner tl"></div>
+                <div class="hud-corner tr"></div>
+                <div class="hud-corner bl"></div>
+                <div class="hud-corner br"></div>
+
+                <div class="hud-mark top"></div>
+                <div class="hud-mark bottom"></div>
+                <div class="hud-mark left"></div>
+                <div class="hud-mark right"></div>
+
+                <div class="hud-line h"></div>
+                <div class="hud-line v"></div>
+
+                <!-- 3D Logo Asset -->
+                <div class="animate-float" style="perspective: 1000px;">
+                    <img id="hero-asset" src="/assets/logo 3d.png" alt="FlowFi 3D Logo"
+                        class="w-64 md:w-80 h-auto relative z-10 drop-shadow-2xl transition-transform duration-100 ease-out will-change-transform">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Section 2: Structural Friction (Diagnostic) -->
+    <!-- Section 2: Structural Friction (Diagnostic) -->
+    <section id="infra" class="py-32 w-full bg-white relative section">
+        <div class="w-full px-12 lg:px-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-32 items-center">
+            <div class="space-y-10">
+                <h2 class="text-6xl md:text-7xl lg:text-8xl font-bold text-[#2E2F33] tracking-tighter leading-[0.9]">
+                    <span data-i18n="problem.title1">Web3 capital<br>has scaled.</span> <br />
+                    <span class="text-[#6B6F76]" data-i18n="problem.title2">Governance hasn't.</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-[#6B6F76] font-medium leading-relaxed max-w-xl"
+                    data-i18n="problem.desc">
+                    Passive treasuries suffer from <strong class="text-[#2E2F33]">non-productive stagnation</strong>.
+                    Millions in community
+                    assets sit dormant because the tools for audited deployment don't exist.
+                </p>
+            </div>
+            <!-- Placeholder for Section Asset -->
+            <div
+                class="w-full aspect-video bg-[#F2F3F6] rounded-2xl border border-[#E6E8EE] flex items-center justify-center relative overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-[radial-gradient(#E5E7EB_1px,transparent_1px)] [background-size:24px_24px] opacity-50">
+                </div>
+                <span
+                    class="z-10 text-xs font-bold text-[#9CA3AF] uppercase tracking-[0.2em] bg-white px-4 py-2 rounded-full border border-[#E6E8EE] shadow-sm"
+                    data-i18n="problem.asset">[Asset:
+                    Friction_Diagram_Isometric]</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Dual-Vault Architecture (Taiko Style - Canvas Layout) -->
+    <section id="vaults" class="relative w-full h-screen overflow-hidden bg-white">
+
+        <!-- Background Split -->
+        <div class="absolute inset-0 z-0 flex">
+            <!-- Left Side Background (Governance) - Original Section Color -->
+            <div class="w-1/2 h-full bg-[#FDFDFE] relative overflow-visible">
+            </div>
+            <!-- Right Side Background (Investor) - Unified Color -->
+            <div class="w-1/2 h-full bg-[#FDFDFE] relative">
+            </div>
+        </div>
+
+        <!-- Central Localized Grid (Behind Asset) -->
+        <div class="absolute inset-0 z-0 flex items-center justify-center pointer-events-none overflow-hidden">
+            <!-- Centered Grid with Radial Fade -->
+            <div class="w-[1200px] h-[1200px] absolute mix-blend-multiply opacity-100" style="
+                    background-image: linear-gradient(#D1D5DB 1px, transparent 1px), linear-gradient(90deg, #D1D5DB 1px, transparent 1px); 
+                    background-size: 80px 80px;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    mask-image: radial-gradient(circle, black 0%, transparent 70%);
+                    -webkit-mask-image: radial-gradient(circle, black 0%, transparent 70%);
+                  ">
+            </div>
+            <!-- Decorative Plus Signs on Grid (Static) -->
+            <div class="absolute text-[#D1D5DB] text-2xl font-thin"
+                style="left: 35%; top: 35%; transform: translate(-50%, -50%)">+</div>
+            <div class="absolute text-[#D1D5DB] text-2xl font-thin"
+                style="left: 65%; top: 65%; transform: translate(-50%, -50%)">+</div>
+            <div class="absolute text-[#D1D5DB] text-2xl font-thin"
+                style="left: 35%; top: 65%; transform: translate(-50%, -50%)">+</div>
+            <div class="absolute text-[#D1D5DB] text-2xl font-thin"
+                style="left: 65%; top: 35%; transform: translate(-50%, -50%)">+</div>
+        </div>
+
+        <!-- Central Visual Asset (Floating in Center) -->
+        <div class="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
+            <!-- Asset Wrapper with Continuous Circular Motion -->
+            <div class="relative w-[400px] h-[400px] flex items-center justify-center pointer-events-auto"
+                id="vault-asset-container">
+
+                <!-- Floating Labels connecting to Asset -->
+                <!-- Left Label (Governance) -->
+                <div
+                    class="absolute top-1/2 right-full -translate-y-12 flex items-center justify-end hidden lg:flex mr-8">
+                    <span
+                        class="text-[10px] font-bold text-black uppercase tracking-[0.2em] whitespace-nowrap bg-[#FDFDFE] px-2 z-10 mr-[-2px]"
+                        data-i18n="arch.gov.label">[
+                        Governance ]</span>
+                    <div class="w-16 h-px bg-black"></div>
+                    <div class="w-2 h-2 rounded-full border border-black bg-white ml-[-3px]"></div>
+                </div>
+
+                <!-- Right Label (Investor) -->
+                <div class="absolute top-1/2 left-full translate-y-8 flex items-center hidden lg:flex ml-8">
+                    <div class="w-2 h-2 rounded-full border border-black bg-white mr-[-3px]"></div>
+                    <div class="w-16 h-px bg-black"></div>
+                    <span
+                        class="text-[10px] font-bold text-black uppercase tracking-[0.2em] whitespace-nowrap bg-[#FDFDFE] px-2 z-10 ml-[-2px]"
+                        data-i18n="arch.inv.label">[
+                        Investor ]</span>
+                </div>
+
+                <!-- 3D Image (Smaller & Continuous Animation) -->
+                <div>
+                    <img id="vault-asset" src="/assets/logo 3d.png" alt="FlowFi Vault Core"
+                        class="w-[200px] lg:w-[350px] h-auto drop-shadow-2xl animate-rotate-flat">
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Layer (Bottom Aligned) -->
+        <div
+            class="absolute inset-x-0 bottom-0 z-20 p-12 lg:p-24 w-full h-full flex flex-col lg:flex-row items-end justify-between pointer-events-none">
+
+            <!-- Left Content (Governance) -->
+            <div class="lg:w-1/3 text-left pointer-events-auto space-y-6 pb-12 lg:pb-0">
+                <h3 class="text-6xl lg:text-8xl font-semibold text-black tracking-tighter leading-[0.9]"
+                    data-i18n="arch.gov.title">
+                    Rule &<br>Consensus.
+                </h3>
+                <p class="text-black/70 text-lg leading-relaxed max-w-sm font-medium" data-i18n="arch.gov.desc">
+                    The Governance Treasury manages protocol parameters, voting weights, and total FF consensus
+                    mechanisms.
+                </p>
+
+                <!-- Data Point (Large & Scrambled) -->
+                <div class="mt-8">
+                    <div class="text-[10px] text-[#6B6F76] uppercase tracking-[0.2em] font-bold mb-2"
+                        data-i18n="arch.gov.total">Total Locked</div>
+                    <div class="text-6xl lg:text-8xl font-bold text-[#7B5CFA] tracking-tighter text-scramble"
+                        data-original-text="1.2B FF">1.2B FF</div>
+                    <div class="inline-flex items-center space-x-2 text-[#7B5CFA] mt-4 cursor-pointer group">
+                        <span class="text-xs font-bold uppercase tracking-widest" data-i18n="arch.gov.explore">Explore
+                            Governance</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            class="group-hover:translate-x-1 transition-transform" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Content (Investor) -->
+            <div class="lg:w-1/3 text-right pointer-events-auto space-y-6 flex flex-col items-end">
+                <h3 class="text-6xl lg:text-8xl font-semibold text-black tracking-tighter leading-[0.9]"
+                    data-i18n="arch.inv.title">
+                    Execution &<br>Growth.
+                </h3>
+                <p class="text-black/70 text-lg leading-relaxed max-w-sm font-medium" data-i18n="arch.inv.desc">
+                    The Investor Treasury drives aggressive, audited growth through capital deployment and incubation.
+                </p>
+
+                <!-- Data Point (Large & Scrambled) -->
+                <div class="mt-8">
+                    <div class="text-[10px] text-[#6B6F76] uppercase tracking-[0.2em] font-bold mb-2 text-right"
+                        data-i18n="arch.inv.seed">Seed
+                        Capital</div>
+                    <div class="text-6xl lg:text-8xl font-bold text-[#F2C94C] tracking-tighter text-scramble"
+                        data-original-text="$10M+">$10M+</div>
+                    <div
+                        class="inline-flex items-center justify-end space-x-2 text-[#F2C94C] mt-4 cursor-pointer group w-full">
+                        <span class="text-xs font-bold uppercase tracking-widest" data-i18n="arch.inv.view">View
+                            Portfolio</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            class="group-hover:translate-x-1 transition-transform" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Section 4: Economic Model (Black Hole Launch) -->
+    <!-- Section 4: Economic Model (Taiko Style Bento Grid) -->
+    <section id="economics" class="py-24 bg-[#FAF9F6] w-full">
+        <div class="px-12 lg:px-24 mx-auto w-full">
+
+            <div class="mb-16">
+                <h2 class="text-6xl md:text-7xl font-semibold text-[#2E2F33] tracking-tighter mb-6"
+                    data-i18n="econ.title">The Black
+                    Hole<br>Launch.</h2>
+                <p class="text-xl text-[#6B6F76] max-w-2xl leading-relaxed" data-i18n="econ.desc">
+                    A deflationary, high-impact tokenomics framework designed for sustainable value capture and
+                    ecosystem growth.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 h-auto lg:h-[800px]">
+
+                <!-- Card 1: Total Supply (Tall) -->
+                <div
+                    class="bg-white rounded-[2rem] p-10 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300 lg:row-span-2 group">
+                    <div>
+                        <div class="text-[#FF4F84] font-bold text-sm mb-4 tracking-widest">1.0</div>
+                        <h3 class="text-5xl font-semibold text-[#2E2F33] tracking-tight leading-tight mb-4"
+                            data-i18n="econ.c1.title">
+                            Capped<br>Supply
+                        </h3>
+                    </div>
+
+                    <!-- Abstract Visual -->
+                    <div class="flex-grow flex items-center justify-center py-12">
+                        <div class="relative w-48 h-48">
+                            <div class="absolute inset-0 border-[1px] border-gray-200 transform rotate-45"></div>
+                            <div class="absolute inset-4 border-[1px] border-gray-200 transform rotate-45"></div>
+                            <div class="absolute inset-8 border-[1px] border-gray-200 transform rotate-45"></div>
+                            <div
+                                class="absolute inset-0 border-[1px] border-[#7B5CFA]/20 transform rotate-0 group-hover:rotate-12 transition-transform duration-700">
+                            </div>
+                            <div
+                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-12 text-6xl font-bold text-[#E6E8EE]">
+                                1B</div>
+                        </div>
+                    </div>
+
+                    <p class="text-[#6B6F76] text-lg font-medium leading-relaxed" data-i18n="econ.c1.desc">
+                        Strictly capped at 1 Billion FF. No inflation, no minting. A finite resource for the infinite
+                        ecosystem.
+                    </p>
+                </div>
+
+                <!-- Card 2: Fair Launch (Wide) -->
+                <div
+                    class="bg-white rounded-[2rem] p-10 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300 md:col-span-2 group relative overflow-hidden">
+                    <div class="relative z-10 w-full md:w-1/2">
+                        <div class="text-[#FF4F84] font-bold text-sm mb-4 tracking-widest">2.0</div>
+                        <h3 class="text-4xl font-semibold text-[#2E2F33] tracking-tight leading-tight mb-4"
+                            data-i18n="econ.c2.title">
+                            Fair Launch<br>Distribution
+                        </h3>
+                        <p class="text-[#6B6F76] text-lg font-medium leading-relaxed" data-i18n="econ.c2.desc">
+                            100% Transparency. The Black Hole Launch ensures equal opportunity participation with no VC
+                            pre-allocations.
+                        </p>
+                    </div>
+
+                    <!-- Abstract Visual (Right Side) -->
+                    <div class="absolute right-0 top-0 h-full w-1/2 hidden md:flex items-center justify-center">
+                        <div class="w-64 h-32 bg-[#F2C94C] rounded-full opacity-20 blur-3xl absolute"></div>
+                        <svg viewBox="0 0 200 200"
+                            class="w-64 h-64 text-[#E6E8EE] group-hover:text-[#F2C94C]/20 transition-colors duration-500">
+                            <circle cx="100" cy="100" r="80" stroke="currentColor" stroke-width="1" fill="none" />
+                            <circle cx="100" cy="100" r="60" stroke="currentColor" stroke-width="1" fill="none" />
+                            <circle cx="100" cy="100" r="40" stroke="currentColor" stroke-width="1" fill="none" />
+                            <line x1="20" y1="100" x2="180" y2="100" stroke="currentColor" stroke-width="1" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Card 3: Ecosystem (Square) -->
+                <div
+                    class="bg-white rounded-[2rem] p-10 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300 group">
+                    <div>
+                        <div class="text-[#FF4F84] font-bold text-sm mb-4 tracking-widest">3.0</div>
+                        <h3 class="text-4xl font-semibold text-[#2E2F33] tracking-tight leading-tight"
+                            data-i18n="econ.c3.title">
+                            Ecosystem<br>First
+                        </h3>
+                    </div>
+
+                    <div class="py-8 flex justify-center">
+                        <div class="grid grid-cols-3 gap-2">
+                            <div
+                                class="w-2 h-12 bg-[#E6E8EE] rounded-full group-hover:bg-[#7B5CFA] transition-colors delay-75">
+                            </div>
+                            <div
+                                class="w-2 h-16 bg-[#E6E8EE] rounded-full group-hover:bg-[#7B5CFA] transition-colors delay-100">
+                            </div>
+                            <div
+                                class="w-2 h-10 bg-[#E6E8EE] rounded-full group-hover:bg-[#7B5CFA] transition-colors delay-150">
+                            </div>
+                            <div
+                                class="w-2 h-14 bg-[#E6E8EE] rounded-full group-hover:bg-[#7B5CFA] transition-colors delay-200">
+                            </div>
+                            <div
+                                class="w-2 h-8 bg-[#E6E8EE] rounded-full group-hover:bg-[#7B5CFA] transition-colors delay-300">
+                            </div>
+                            <div
+                                class="w-2 h-12 bg-[#E6E8EE] rounded-full group-hover:bg-[#7B5CFA] transition-colors delay-500">
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-[#6B6F76] font-medium" data-i18n="econ.c3.desc">
+                        50% allocated fundamentally to ecosystem incentives & builder grants.
+                    </p>
+                </div>
+
+                <!-- Card 4: Collateral (Square) -->
+                <div
+                    class="bg-white rounded-[2rem] p-10 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300 group">
+                    <div>
+                        <div class="text-[#FF4F84] font-bold text-sm mb-4 tracking-widest">4.0</div>
+                        <h3 class="text-4xl font-semibold text-[#2E2F33] tracking-tight leading-tight"
+                            data-i18n="econ.c4.title">
+                            Deep<br>Collateral
+                        </h3>
+                    </div>
+
+                    <div class="py-8 flex justify-center relative">
+                        <div
+                            class="w-32 h-32 border border-[#E6E8EE] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                            <div class="w-20 h-20 bg-[#F2C94C]/10 rounded-full flex items-center justify-center">
+                                <div class="text-[#F2C94C] font-bold">190%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-[#6B6F76] font-medium" data-i18n="econ.c4.desc">
+                        Over-collateralized ratio ensuring protocol solvency and stability.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Roadmap -->
+    <section id="roadmap" class="py-32 w-full bg-white border-t border-[#E6E8EE] section">
+        <div class="w-full px-12 lg:px-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+            <!-- Left Column: Title & Context -->
+            <div class="lg:col-span-5 space-y-10 sticky top-32 h-fit">
+
+                <h2 class="text-6xl md:text-7xl lg:text-8xl font-bold text-[#2E2F33] tracking-tighter leading-[0.9]">
+                    <span data-i18n="road.title1">Long-term</span><br><span class="text-[#7B5CFA]"
+                        data-i18n="road.title2">Infrastructure.</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-[#6B6F76] font-medium leading-relaxed max-w-xl"
+                    data-i18n="road.desc">
+                    FlowFi's roadmap is not about trends. It is about the systemic transition of capital to the ENI
+                    Mainnet.
+                </p>
+                <div class="pt-4">
+                    <a href="#"
+                        class="inline-flex items-center px-8 py-4 rounded-full border border-[#E6E8EE] text-[#2E2F33] font-semibold text-lg hover:border-[#7B5CFA] hover:text-[#7B5CFA] transition-all group bg-white hover:shadow-lg">
+                        <span data-i18n="road.read">Read Litepaper</span>
+                        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Spacer / Line Column -->
+            <div class="lg:col-span-1 lg:col-start-6 relative hidden lg:block">
+                <!-- Vertical Line Container -->
+                <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-[#E6E8EE] h-full">
+                    <!-- Animated Progress Bar (Gradient) -->
+                    <div class="absolute top-0 left-0 w-full bg-[#7B5CFA] shadow-[0_0_15px_rgba(123,92,250,0.6)] animate-[heightGrow_4s_ease-out_forwards]"
+                        style="height: 60%;"></div>
+                </div>
+            </div>
+
+            <!-- Timeline Content Items -->
+            <div class="lg:col-span-6 space-y-32 pt-12 relative">
+                <!-- Mobile Line (Visible only on small screens) -->
+                <div class="absolute left-0 top-12 bottom-0 w-px bg-[#E6E8EE] lg:hidden"></div>
+
+                <!-- Phase 01 -->
+                <div class="relative pl-16 group">
+                    <!-- Dot -->
+                    <div
+                        class="absolute -left-[6px] lg:left-[-6px] lg:-ml-[calc(50%+1px)] top-3 w-4 h-4 rounded-full bg-[#7B5CFA] ring-8 ring-white shadow-xl z-10 transition-transform duration-500 group-hover:scale-125">
+                    </div>
+
+                    <!-- Line override for Desktop -->
+                    <div class="absolute -left-px top-0 bottom-0 w-px bg-[#E6E8EE] h-full hidden lg:block">
+                        <div class="absolute top-0 left-0 w-full bg-[#7B5CFA] shadow-[0_0_15px_rgba(123,92,250,0.6)] animate-[heightGrow_4s_ease-out_forwards]"
+                            style="height: 60%;"></div>
+                    </div>
+
+                    <!-- Dot Redux -->
+                    <div
+                        class="absolute -left-[7px] top-3 w-4 h-4 rounded-full bg-[#7B5CFA] ring-8 ring-white shadow-xl z-20 transition-transform duration-500 group-hover:scale-125">
+                    </div>
+
+                    <div class="space-y-6">
+                        <span class="text-sm font-bold text-[#7B5CFA] uppercase tracking-[0.25em]"
+                            data-i18n="road.p1.sub">Phase 01: System
+                            Launch</span>
+                        <h3 class="text-4xl md:text-5xl font-bold text-[#2E2F33] group-hover:text-[#7B5CFA] transition-colors leading-tight"
+                            data-i18n="road.p1.title">
+                            Genesis Governance</h3>
+                        <p class="text-xl text-[#6B6F76] leading-relaxed max-w-2xl" data-i18n="road.p1.desc">Black Hole
+                            Launch completion and
+                            establishment of the dual-vault consensus architecture.</p>
+                    </div>
+                </div>
+
+                <!-- Phase 02 -->
+                <div class="relative pl-16 group">
+                    <!-- Dot -->
+                    <div
+                        class="absolute -left-[7px] top-3 w-4 h-4 rounded-full bg-[#7B5CFA] ring-8 ring-white shadow-xl z-20 transition-transform duration-500 group-hover:scale-125">
+                    </div>
+
+                    <div class="space-y-6">
+                        <span class="text-sm font-bold text-[#7B5CFA] uppercase tracking-[0.25em]"
+                            data-i18n="road.p2.sub">Phase 02:
+                            Expansion</span>
+                        <h3 class="text-4xl md:text-5xl font-bold text-[#2E2F33] group-hover:text-[#7B5CFA] transition-colors leading-tight"
+                            data-i18n="road.p2.title">
+                            Backflow Optimization</h3>
+                        <p class="text-xl text-[#6B6F76] leading-relaxed max-w-2xl" data-i18n="road.p2.desc">Integration
+                            of automated revenue
+                            routing and multi-strategy investor treasury pools.</p>
+                    </div>
+                </div>
+
+                <!-- Phase 03 -->
+                <div class="relative pl-16 group opacity-60 hover:opacity-100 transition-opacity duration-500">
+                    <!-- Dot (Gray/Future) -->
+                    <div class="absolute -left-[7px] top-3 w-4 h-4 rounded-full bg-[#E6E8EE] ring-8 ring-white z-20">
+                    </div>
+
+                    <div class="space-y-6">
+                        <span class="text-sm font-bold text-[#9CA3AF] uppercase tracking-[0.25em]"
+                            data-i18n="road.p3.sub">Phase 03: Global
+                            Tier</span>
+                        <h3 class="text-4xl md:text-5xl font-bold text-[#9CA3AF] group-hover:text-[#2E2F33] transition-colors leading-tight"
+                            data-i18n="road.p3.title">
+                            Enterprise Scaling</h3>
+                        <p class="text-xl text-[#9CA3AF] leading-relaxed max-w-2xl" data-i18n="road.p3.desc">
+                            Standardized vault templates for
+                            Web2 institutional migration to ENI Mainnet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter / Community (Taiko Style Banner) -->
+    <!-- Newsletter / Community (Taiko Style Banner Redesign) -->
+    <section class="py-12 px-12 lg:px-24 w-full">
+        <div
+            class="w-full mx-auto relative overflow-hidden rounded-[3rem] min-h-[500px] flex items-center bg-[#FDFDFE] border border-[#E6E8EE] shadow-sm">
+
+            <!-- Abstract Background Shapes (Taiko-inspired) -->
+            <div class="absolute inset-0 pointer-events-none overflow-hidden">
+                <!-- Large soft pink/purple gradient circle top right -->
+                <div
+                    class="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-gradient-to-br from-[#7B5CFA]/10 to-transparent rounded-full blur-3xl opacity-60">
+                </div>
+                <!-- Smaller gold accent circle bottom left -->
+                <div
+                    class="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-gradient-to-tr from-[#F2C94C]/10 to-transparent rounded-full blur-3xl opacity-60">
+                </div>
+                <!-- Thin grid lines overlay -->
+                <div class="absolute inset-0 opacity-10"
+                    style="background-image: radial-gradient(#7B5CFA 1px, transparent 1px); background-size: 30px 30px;">
+                </div>
+
+                <!-- Decorative Arc Swirls -->
+                <div class="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none">
+                    <svg viewBox="0 0 800 600" class="w-full h-full text-[#7B5CFA] fill-none stroke-current stroke-1">
+                        <circle cx="800" cy="0" r="300" />
+                        <circle cx="800" cy="0" r="500" />
+                        <circle cx="800" cy="0" r="700" />
+                    </svg>
+                </div>
+            </div>
+
+            <div
+                class="relative z-10 w-full px-8 md:px-20 py-16 flex flex-col xl:flex-row items-center xl:items-end justify-between gap-12 text-center xl:text-left">
+
+                <!-- Typography -->
+                <div class="space-y-8 max-w-4xl">
+                    <div class="inline-block px-5 py-2 rounded-full bg-[#7B5CFA]/5 border border-[#7B5CFA]/10 text-[#7B5CFA] text-xs font-bold tracking-[0.2em] uppercase"
+                        data-i18n="news.tag">
+                        The Institutional Standard
+                    </div>
+
+                    <h2 class="text-4xl md:text-6xl font-semibold text-[#2E2F33] leading-[1.1] tracking-tighter"
+                        data-i18n="news.title">
+                        Are you a governance architect?<br>
+                        <span class="text-[#7B5CFA]">A yield-seeking strategist?</span><br>
+                        An automated treasury?
+                    </h2>
+
+                    <p class="text-xl text-[#6B6F76] font-medium leading-relaxed max-w-2xl mx-auto xl:mx-0"
+                        data-i18n="news.desc">
+                        FlowFi is the consensus layer for capital. Explore the dual-vault architecture, participate in
+                        governance, and automate your yield.
+                    </p>
+                </div>
+
+                <!-- Input / CTA Field -->
+                <div
+                    class="w-full xl:w-auto flex-shrink-0 bg-white p-2 pl-6 rounded-full border border-[#E6E8EE] shadow-md flex items-center max-w-lg mx-auto xl:mx-0 group focus-within:ring-2 focus-within:ring-[#7B5CFA]/20 transition-all">
+                    <input type="email" placeholder="Institutional email address" data-i18n="news.placeholder"
+                        class="flex-grow bg-transparent text-[#2E2F33] text-lg outline-none placeholder:text-[#9CA3AF]" />
+                    <button
+                        class="bg-[#7B5CFA] text-white px-8 py-4 rounded-full font-bold tracking-wide hover:bg-[#6A4CE0] transition-colors whitespace-nowrap ml-4"
+                        data-i18n="news.btn">
+                        Subscribe
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="pt-32 pb-16 px-12 lg:px-24 bg-[#FDFDFE] border-t border-[#E6E8EE] w-full">
+        <div class="w-full mx-auto grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-20 mb-32">
+            <!-- Brand Column -->
+            <div class="col-span-1 md:col-span-2 space-y-8">
+                <a href="#" class="flex items-center opacity-80 hover:opacity-100 transition-opacity">
+                    <img src="/assets/logo.png" alt="FlowFi" class="h-16 w-auto">
+                </a>
+                <p class="text-[#6B6F76] text-lg leading-relaxed max-w-sm font-medium" data-i18n="footer.desc">
+                    Decentralized infrastructure for the institutional management of on-chain capital.
+                </p>
+                <div class="flex space-x-6 pt-4">
+                    <!-- Social Icons (Placeholder) -->
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-[#F5F6F8] flex items-center justify-center text-[#6B6F76] hover:bg-[#7B5CFA] hover:text-white transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.564 2.457-2.549z" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-[#F5F6F8] flex items-center justify-center text-[#6B6F76] hover:bg-[#7B5CFA] hover:text-white transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Links Column 1: Architecture -->
+            <div>
+                <h5 class="text-xs font-bold text-black uppercase tracking-[0.2em] mb-8" data-i18n="footer.col1">
+                    Architecture</h5>
+                <ul class="space-y-6 text-base font-medium text-[#6B6F76]">
+                    <li><a href="#vaults" class="hover:text-[#7B5CFA] transition-colors"
+                            data-i18n="footer.l1.1">Consensus Vaults</a></li>
+                    <li><a href="#vaults" class="hover:text-[#7B5CFA] transition-colors"
+                            data-i18n="footer.l1.2">Investor Treasury</a></li>
+                    <li><a href="#features" class="hover:text-[#7B5CFA] transition-colors" data-i18n="footer.l1.3">Core
+                            Features</a></li>
+                </ul>
+            </div>
+
+            <!-- Links Column 2: Economics -->
+            <div>
+                <h5 class="text-xs font-bold text-black uppercase tracking-[0.2em] mb-8" data-i18n="footer.col2">
+                    Economics</h5>
+                <ul class="space-y-6 text-base font-medium text-[#6B6F76]">
+                    <li><a href="#economics" class="hover:text-[#7B5CFA] transition-colors"
+                            data-i18n="footer.l2.1">Tokenomics</a></li>
+                    <li><a href="#economics" class="hover:text-[#7B5CFA] transition-colors"
+                            data-i18n="footer.l2.2">Black Hole Launch</a></li>
+                    <li><a href="#economics" class="hover:text-[#7B5CFA] transition-colors"
+                            data-i18n="footer.l2.3">Grants Program</a></li>
+                </ul>
+            </div>
+
+            <!-- Links Column 3: Governance (External) -->
+            <div>
+                <h5 class="text-xs font-bold text-black uppercase tracking-[0.2em] mb-8" data-i18n="footer.col3">
+                    Governance</h5>
+                <ul class="space-y-6 text-base font-medium text-[#6B6F76]">
+                    <li><a href="#" class="hover:text-[#7B5CFA] transition-colors" data-i18n="footer.l3.1">DAO
+                            Portal</a></li>
+                    <li><a href="#" class="hover:text-[#7B5CFA] transition-colors" data-i18n="footer.l3.2">Discussion
+                            Forum</a></li>
+                    <li><a href="#" class="hover:text-[#7B5CFA] transition-colors" data-i18n="footer.l3.3">Snapshot
+                            Voting</a></li>
+                </ul>
+            </div>
+
+            <!-- Links Column 4: Legal -->
+            <div>
+                <h5 class="text-xs font-bold text-black uppercase tracking-[0.2em] mb-8" data-i18n="footer.col4">Legal
+                </h5>
+                <ul class="space-y-6 text-base font-medium text-[#6B6F76]">
+                    <li><a href="#" class="hover:text-[#7B5CFA] transition-colors" data-i18n="footer.l4.1">Terms of
+                            Service</a></li>
+                    <li><a href="#" class="hover:text-[#7B5CFA] transition-colors" data-i18n="footer.l4.2">Privacy
+                            Policy</a></li>
+                    <li><a href="#" class="hover:text-[#7B5CFA] transition-colors" data-i18n="footer.l4.3">Security
+                            Audits</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class="w-full flex flex-col md:flex-row justify-between items-center border-t border-[#E6E8EE] pt-12 text-[11px] font-bold text-[#9CA3AF] uppercase tracking-[0.2em]">
+            <span data-i18n="footer.copy">© 2026 FlowFi Foundation. All rights reserved.</span>
+            <div class="flex space-x-12 mt-8 md:mt-0 items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                    <span data-i18n="footer.status">Systems Operational</span>
+                </div>
+                <span data-i18n="footer.audit">Certik Audited</span>
+                <span data-i18n="footer.partner">Bitget Wallet Partner</span>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
