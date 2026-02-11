@@ -321,6 +321,12 @@ nav {
   gap: 12px;
 }
 
+@media (max-width: 1024px) {
+  .side-nav {
+    display: none !important;
+  }
+}
+
 .nav-bracket {
   width: 12px;
   height: 6px;
@@ -497,6 +503,12 @@ nav {
   box-shadow: none;
 }
 
+@media (max-width: 1024px) {
+  .side-nav {
+    display: none !important;
+  }
+}
+
 .nav-dot {
   width: 6px;
   height: 6px;
@@ -533,7 +545,7 @@ nav {
 
 /* Mobile Menu Animation State */
 #mobile-menu-btn.menu-open #hamburger-top {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(9px) rotate(45deg);
 }
 
 #mobile-menu-btn.menu-open #hamburger-middle {
@@ -541,5 +553,5 @@ nav {
 }
 
 #mobile-menu-btn.menu-open #hamburger-bottom {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-9px) rotate(-45deg);
 }

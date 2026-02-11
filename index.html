@@ -29,9 +29,9 @@
     <!-- Navigation Bar -->
     <nav class="fixed top-0 w-full z-50 bg-white border-b-2 border-black shadow-[0_4px_0px_0px_rgba(0,0,0,1)]"
         style="height: 110px;">
-        <div class="h-full px-8 lg:px-16 flex items-center justify-between">
+        <div class="h-full px-6 lg:px-16 flex items-center justify-between">
             <!-- Left: Logo + Nav Links -->
-            <div class="flex items-center h-full gap-10">
+            <div class="flex items-center h-full gap-4 lg:gap-10">
                 <!-- Logo -->
                 <a href="#" class="flex items-center group">
                     <img src="/assets/logo.png" alt="FlowFi"
@@ -114,7 +114,7 @@
 
         <!-- Mobile Menu Overlay -->
         <div id="mobile-menu"
-            class="fixed inset-0 bg-white z-40 flex flex-col pt-32 px-8 gap-8 transform translate-x-full transition-transform duration-300 lg:hidden">
+            class="fixed inset-0 bg-white z-40 flex flex-col pt-32 px-6 gap-8 transform translate-x-full transition-transform duration-300 lg:hidden overflow-y-auto">
 
             <!-- Mobile Links -->
             <div class="flex flex-col gap-6">
@@ -164,12 +164,12 @@
 
     <!-- Section 1: Hero -->
     <main id="hero"
-        class="min-h-screen pt-[160px] pb-20 flex flex-col lg:flex-row items-center justify-between w-full px-8 lg:px-24 section overflow-hidden gap-16 relative">
+        class="min-h-screen pt-32 lg:pt-[160px] pb-20 flex flex-col lg:flex-row items-center justify-between w-full px-6 lg:px-24 section overflow-hidden gap-12 lg:gap-16 relative">
 
         <!-- Left Column: Copywriting -->
         <div class="flex-1 text-left flex flex-col items-start z-10 w-full lg:w-1/2">
             <h1
-                class="text-7xl md:text-9xl font-bold text-[#2E2F33] leading-[0.9] mb-8 tracking-tighter animate-on-scroll">
+                class="text-5xl md:text-7xl lg:text-9xl font-bold text-[#2E2F33] leading-tight md:leading-[0.9] mb-8 tracking-tighter animate-on-scroll">
                 <span data-i18n="hero.title1">FlowFi is Capital,</span> <br />
                 <span class="text-[#7B5CFA]" data-i18n="hero.title2">Governed.</span>
             </h1>
@@ -319,10 +319,11 @@
 
     <!-- Section 2: Structural Friction (Diagnostic) -->
     <!-- Section 2: Structural Friction (Diagnostic) -->
-    <section id="infra" class="py-32 w-full bg-transparent relative section">
-        <div class="w-full px-12 lg:px-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-32 items-center">
+    <section id="infra" class="py-20 lg:py-32 w-full bg-transparent relative section">
+        <div class="w-full px-6 lg:px-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-32 items-center">
             <div class="space-y-10">
-                <h2 class="text-7xl md:text-8xl lg:text-9xl font-bold text-[#2E2F33] tracking-tighter leading-[0.9]">
+                <h2
+                    class="text-5xl md:text-7xl lg:text-9xl font-bold text-[#2E2F33] tracking-tighter leading-tight md:leading-[0.9]">
                     <span data-i18n="problem.title1">Web3 capital<br>has scaled.</span> <br />
                     <span class="text-[#6B6F76]" data-i18n="problem.title2">Governance hasn't.</span>
                 </h2>
@@ -412,7 +413,7 @@
 
             <!-- Left Content (Governance) -->
             <div class="lg:w-1/3 text-left pointer-events-auto space-y-6 pb-12 lg:pb-0">
-                <h3 class="text-5xl lg:text-9xl font-semibold text-black tracking-tighter leading-[0.9]"
+                <h3 class="text-4xl lg:text-9xl font-semibold text-black tracking-tighter leading-tight lg:leading-[0.9]"
                     data-i18n="arch.gov.title">
                     Rule &<br>Consensus.
                 </h3>
@@ -440,7 +441,7 @@
 
             <!-- Right Content (Investor) -->
             <div class="lg:w-1/3 text-right pointer-events-auto space-y-6 flex flex-col items-end">
-                <h3 class="text-5xl lg:text-9xl font-semibold text-black tracking-tighter leading-[0.9]"
+                <h3 class="text-4xl lg:text-9xl font-semibold text-black tracking-tighter leading-tight lg:leading-[0.9]"
                     data-i18n="arch.inv.title">
                     Execution &<br>Growth.
                 </h3>
@@ -473,11 +474,11 @@
 
     <!-- Section 4: Economic Model (Black Hole Launch) -->
     <!-- Section 4: Economic Model (Taiko Style Bento Grid) -->
-    <section id="economics" class="py-24 bg-transparent w-full section">
-        <div class="px-12 lg:px-24 mx-auto w-full">
+    <section id="economics" class="py-16 lg:py-24 bg-transparent w-full section">
+        <div class="px-6 lg:px-24 mx-auto w-full">
 
             <div class="mb-16">
-                <h2 class="text-5xl md:text-8xl font-semibold text-[#2E2F33] tracking-tighter mb-6"
+                <h2 class="text-4xl md:text-6xl lg:text-8xl font-semibold text-[#2E2F33] tracking-tighter mb-6 leading-tight"
                     data-i18n="econ.title">The Black
                     Hole<br>Launch.</h2>
                 <p class="text-2xl text-[#6B6F76] max-w-2xl leading-relaxed" data-i18n="econ.desc">
@@ -575,12 +576,12 @@
         </div>
     </section>
     <!-- Section 5: Roadmap -->
-    <section id="roadmap" class="py-32 w-full bg-transparent border-t border-[#E6E8EE] section">
-        <div class="w-full px-12 lg:px-24">
+    <section id="roadmap" class="py-20 lg:py-32 w-full bg-transparent border-t border-[#E6E8EE] section">
+        <div class="w-full px-6 lg:px-24">
             <!-- Section Header -->
             <div class="mb-20 max-w-4xl">
                 <h2
-                    class="text-5xl md:text-8xl lg:text-9xl font-bold text-[#2E2F33] tracking-tighter leading-[0.9] mb-8">
+                    class="text-5xl md:text-7xl lg:text-9xl font-bold text-[#2E2F33] tracking-tighter leading-tight md:leading-[0.9] mb-8">
                     <span data-i18n="road.title1">Long-term</span><br><span class="text-[#7B5CFA]"
                         data-i18n="road.title2">Infrastructure.</span>
                 </h2>
@@ -714,7 +715,7 @@
         </div>
     </section>
     <!-- Newsletter / Community Card (Overlapping Footer) -->
-    <section class="relative w-full px-12 lg:px-24 pb-24">
+    <section class="relative w-full px-6 lg:px-24 pb-24">
         <div class="w-full mx-auto relative z-10">
             <!-- Main Card with Neubrutalism Style -->
             <div
@@ -747,7 +748,7 @@
                         </div>
 
                         <!-- Heading -->
-                        <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold text-[#2E2F33] leading-[1.05] tracking-tight"
+                        <h2 class="text-3xl md:text-5xl lg:text-7xl font-bold text-[#2E2F33] leading-tight lg:leading-[1.05] tracking-tight"
                             data-i18n="news.title">
                             Are you a governance architect?<br>
                             <span class="text-[#7B5CFA]">A yield-seeking strategist?</span><br>
@@ -801,7 +802,7 @@
     </section>
 
     <!-- Footer (Overlapped by Card Above) -->
-    <footer class="pt-64 pb-24 px-12 lg:px-24 bg-transparent border-t-4 border-black w-full -mt-48">
+    <footer class="pt-64 pb-24 px-6 lg:px-24 bg-transparent border-t-4 border-black w-full -mt-48">
         <div class="w-full mx-auto">
             <!-- Main Footer Content -->
             <div class="flex flex-col lg:flex-row justify-between gap-12 lg:gap-16 mb-16">
