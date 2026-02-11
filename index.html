@@ -96,12 +96,70 @@
 
                 <!-- Launch App CTA -->
                 <button
-                    class="bg-[#7B5CFA] text-white px-10 py-4 rounded-xl text-lg font-bold border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all"
+                    class="hidden md:block bg-[#7B5CFA] text-white px-10 py-4 rounded-xl text-lg font-bold border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all"
+                    data-i18n="nav.launch">
+                    Launch App
+                </button>
+
+                <!-- Mobile Menu Button (Hamburger) -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-[#2E2F33] z-50 relative">
+                    <div class="w-8 h-8 flex flex-col justify-center items-center gap-1.5">
+                        <span class="block w-8 h-0.5 bg-black transition-all duration-300" id="hamburger-top"></span>
+                        <span class="block w-8 h-0.5 bg-black transition-all duration-300" id="hamburger-middle"></span>
+                        <span class="block w-8 h-0.5 bg-black transition-all duration-300" id="hamburger-bottom"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-white z-40 flex flex-col pt-32 px-8 gap-8 transform translate-x-full transition-transform duration-300 lg:hidden">
+
+            <!-- Mobile Links -->
+            <div class="flex flex-col gap-6">
+                <a href="#infra"
+                    class="mobile-link text-4xl font-bold text-[#2E2F33] hover:text-[#7B5CFA] transition-colors uppercase tracking-tight"
+                    data-i18n="nav.infra">
+                    Infrastructure
+                </a>
+                <a href="#vaults"
+                    class="mobile-link text-4xl font-bold text-[#2E2F33] hover:text-[#7B5CFA] transition-colors uppercase tracking-tight"
+                    data-i18n="nav.arch">
+                    Architecture
+                </a>
+                <a href="#economics"
+                    class="mobile-link text-4xl font-bold text-[#2E2F33] hover:text-[#7B5CFA] transition-colors uppercase tracking-tight"
+                    data-i18n="nav.econ">
+                    Economics
+                </a>
+                <a href="#roadmap"
+                    class="mobile-link text-4xl font-bold text-[#2E2F33] hover:text-[#7B5CFA] transition-colors uppercase tracking-tight"
+                    data-i18n="nav.roadmap">
+                    Roadmap
+                </a>
+            </div>
+
+            <!-- Mobile Bottom Actions -->
+            <div class="mt-auto pb-12 flex flex-col gap-8">
+                <!-- Language -->
+                <div class="flex items-center gap-8 border-t-2 border-black pt-8">
+                    <span class="text-sm font-bold uppercase tracking-widest text-[#6B6F76]">Language</span>
+                    <div class="flex gap-4">
+                        <button onclick="window.setLanguage('en')"
+                            class="text-xl font-bold text-[#2E2F33] hover:text-[#7B5CFA]">EN</button>
+                        <button onclick="window.setLanguage('cn')"
+                            class="text-xl font-bold text-[#6B6F76] hover:text-[#7B5CFA]">CN</button>
+                    </div>
+                </div>
+
+                <!-- Primary Action -->
+                <button
+                    class="w-full bg-[#7B5CFA] text-white px-8 py-5 rounded-xl text-xl font-bold border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-y-1 active:shadow-none transition-all"
                     data-i18n="nav.launch">
                     Launch App
                 </button>
             </div>
-        </div>
     </nav>
 
     <!-- Section 1: Hero -->

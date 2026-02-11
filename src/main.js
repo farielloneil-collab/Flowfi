@@ -89,4 +89,37 @@ document.addEventListener('DOMContentLoaded', () => {
     // Apply Tilt Effect to Sections
     addTiltEffect('hero', 'hero-asset');
     // addTiltEffect('vaults', 'vault-asset'); // Disabled for Vaults section in favor of continuous animation
+
+    // Mobile Menu Toggle Logic
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    const body = document.body;
+
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('translate-x-full');
+
+            if (isOpen) {
+                // Close Menu
+                mobileMenu.classList.add('translate-x-full');
+                mobileMenuBtn.classList.remove('menu-open');
+                body.style.overflow = '';
+            } else {
+                // Open Menu
+                mobileMenu.classList.remove('translate-x-full');
+                mobileMenuBtn.classList.add('menu-open');
+                body.style.overflow = 'hidden';
+            }
+        });
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                mobileMenuBtn.classList.remove('menu-open');
+                body.style.overflow = '';
+            });
+        });
+    }
 });

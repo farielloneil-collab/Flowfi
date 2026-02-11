@@ -530,3 +530,16 @@ nav {
 .nav-dot::after {
   content: none;
 }
+
+/* Mobile Menu Animation State */
+#mobile-menu-btn.menu-open #hamburger-top {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#mobile-menu-btn.menu-open #hamburger-middle {
+  opacity: 0;
+}
+
+#mobile-menu-btn.menu-open #hamburger-bottom {
+  transform: translateY(-8px) rotate(-45deg);
+}
