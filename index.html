@@ -112,55 +112,57 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu"
-            class="fixed inset-0 bg-white z-40 flex flex-col pt-32 px-6 gap-8 transform translate-x-full transition-transform duration-300 lg:hidden overflow-y-auto">
-
-            <!-- Mobile Links -->
-            <div class="flex flex-col gap-6">
-                <a href="#infra"
-                    class="mobile-link text-4xl font-bold text-[#2E2F33] hover:text-[#7B5CFA] transition-colors uppercase tracking-tight"
-                    data-i18n="nav.infra">
-                    Infrastructure
-                </a>
-                <a href="#vaults"
-                    class="mobile-link text-4xl font-bold text-[#2E2F33] hover:text-[#7B5CFA] transition-colors uppercase tracking-tight"
-                    data-i18n="nav.arch">
-                    Architecture
-                </a>
-                <a href="#economics"
-                    class="mobile-link text-4xl font-bold text-[#2E2F33] hover:text-[#7B5CFA] transition-colors uppercase tracking-tight"
-                    data-i18n="nav.econ">
-                    Economics
-                </a>
-                <a href="#roadmap"
-                    class="mobile-link text-4xl font-bold text-[#2E2F33] hover:text-[#7B5CFA] transition-colors uppercase tracking-tight"
-                    data-i18n="nav.roadmap">
-                    Roadmap
-                </a>
-            </div>
-
-            <!-- Mobile Bottom Actions -->
-            <div class="mt-auto pb-12 flex flex-col gap-8">
-                <!-- Language -->
-                <div class="flex items-center gap-8 border-t-2 border-black pt-8">
-                    <span class="text-sm font-bold uppercase tracking-widest text-[#6B6F76]">Language</span>
-                    <div class="flex gap-4">
-                        <button onclick="window.setLanguage('en')"
-                            class="text-xl font-bold text-[#2E2F33] hover:text-[#7B5CFA]">EN</button>
-                        <button onclick="window.setLanguage('cn')"
-                            class="text-xl font-bold text-[#6B6F76] hover:text-[#7B5CFA]">CN</button>
-                    </div>
-                </div>
-
-                <!-- Primary Action -->
-                <button
-                    class="w-full bg-[#7B5CFA] text-white px-8 py-5 rounded-xl text-xl font-bold border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-y-1 active:shadow-none transition-all"
-                    data-i18n="nav.launch">
-                    Launch App
-                </button>
-            </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-white z-40 flex flex-col pt-32 px-6 gap-8 transform translate-x-full transition-transform duration-300 lg:hidden overflow-y-auto">
+
+        <!-- Mobile Links -->
+        <div class="flex flex-col gap-6">
+            <a href="#infra"
+                class="mobile-link text-4xl font-bold text-[#2E2F33] hover:text-[#7B5CFA] transition-colors uppercase tracking-tight"
+                data-i18n="nav.infra">
+                Infrastructure
+            </a>
+            <a href="#vaults"
+                class="mobile-link text-4xl font-bold text-[#2E2F33] hover:text-[#7B5CFA] transition-colors uppercase tracking-tight"
+                data-i18n="nav.arch">
+                Architecture
+            </a>
+            <a href="#economics"
+                class="mobile-link text-4xl font-bold text-[#2E2F33] hover:text-[#7B5CFA] transition-colors uppercase tracking-tight"
+                data-i18n="nav.econ">
+                Economics
+            </a>
+            <a href="#roadmap"
+                class="mobile-link text-4xl font-bold text-[#2E2F33] hover:text-[#7B5CFA] transition-colors uppercase tracking-tight"
+                data-i18n="nav.roadmap">
+                Roadmap
+            </a>
+        </div>
+
+        <!-- Mobile Bottom Actions -->
+        <div class="mt-auto pb-12 flex flex-col gap-8">
+            <!-- Language -->
+            <div class="flex items-center gap-8 border-t-2 border-black pt-8">
+                <span class="text-sm font-bold uppercase tracking-widest text-[#6B6F76]">Language</span>
+                <div class="flex gap-4">
+                    <button onclick="window.setLanguage('en')"
+                        class="text-xl font-bold text-[#2E2F33] hover:text-[#7B5CFA]">EN</button>
+                    <button onclick="window.setLanguage('cn')"
+                        class="text-xl font-bold text-[#6B6F76] hover:text-[#7B5CFA]">CN</button>
+                </div>
+            </div>
+
+            <!-- Primary Action -->
+            <button
+                class="w-full bg-[#7B5CFA] text-white px-8 py-5 rounded-xl text-xl font-bold border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-y-1 active:shadow-none transition-all"
+                data-i18n="nav.launch">
+                Launch App
+            </button>
+        </div>
+    </div>
 
     <!-- Section 1: Hero -->
     <main id="hero"
@@ -719,7 +721,7 @@
         <div class="w-full mx-auto relative z-10">
             <!-- Main Card with Neubrutalism Style -->
             <div
-                class="bg-white rounded-[2.5rem] p-10 lg:p-12 border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden">
+                class="bg-white rounded-[2rem] lg:rounded-[2.5rem] p-8 md:p-10 lg:p-14 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden">
 
                 <!-- Background Decorative Elements -->
                 <div class="absolute inset-0 pointer-events-none overflow-hidden">
@@ -737,7 +739,8 @@
                 <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
 
                     <!-- Left: Text Content -->
-                    <div class="flex-1 space-y-5 text-center lg:text-left">
+                    <div
+                        class="flex-1 space-y-6 md:space-y-8 text-center lg:text-left flex flex-col items-center lg:items-start">
                         <!-- Tag -->
                         <div
                             class="inline-flex items-center px-4 py-1.5 rounded-full bg-[#7B5CFA] border-2 border-black">
@@ -748,15 +751,16 @@
                         </div>
 
                         <!-- Heading -->
-                        <h2 class="text-3xl md:text-5xl lg:text-7xl font-bold text-[#2E2F33] leading-tight lg:leading-[1.05] tracking-tight"
+                        <!-- Heading -->
+                        <h2 class="text-3xl md:text-5xl lg:text-7xl font-bold text-[#2E2F33] leading-[1.1] md:leading-tight lg:leading-[1.05] tracking-tight w-full max-w-4xl"
                             data-i18n="news.title">
-                            Are you a governance architect?<br>
-                            <span class="text-[#7B5CFA]">A yield-seeking strategist?</span><br>
-                            An automated treasury?
+                            Are you a governance architect?<br class="hidden md:block">
+                            <span class="text-[#7B5CFA] block md:inline mt-2 md:mt-0">A yield-seeking strategist?</span>
+                            <span class="block mt-2 md:mt-0">An automated treasury?</span>
                         </h2>
 
                         <!-- Description -->
-                        <p class="text-xl text-[#6B6F76] font-medium leading-relaxed max-w-2xl mx-auto lg:mx-0"
+                        <p class="text-lg md:text-xl text-[#6B6F76] font-medium leading-relaxed max-w-2xl lg:max-w-3xl mx-auto lg:mx-0"
                             data-i18n="news.desc">
                             FlowFi is the consensus layer for capital. Explore the dual-vault architecture, participate
                             in
